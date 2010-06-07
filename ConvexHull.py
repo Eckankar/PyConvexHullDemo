@@ -47,6 +47,9 @@ class ConvexHull:
         for l in self.markers.linemarkers.itervalues():
             pygame.draw.line(self.window, l['color'], pt(l['start']), pt(l['end']))
 
+        for l in self.markers.verticalmarkers.itervalues():
+            pygame.draw.line(self.window, l['color'], pt((l['x'], 0)), pt((l['x'], 1)))
+
         for p in self.markers.pointmarkers.itervalues():
             pygame.draw.circle(self.window, p['color'], pt(p['index']), self.pointSize)
 
@@ -66,6 +69,7 @@ def main():
     algorithms = {
         'jarvismarch': JarvisMarch(),
         'grahamscan': GrahamScan(),
+        'marriagebq': MarriageBeforeConquest(),
     }
     parser = OptionParser()
     parser.add_option('-a', '--algorithm', type='choice',
