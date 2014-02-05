@@ -5,7 +5,7 @@ class HullAlgorithm:
     An algorithm must be initialized with initialize before use.
 
     The field 'plane' contains a Plane containing the points we're working on.
-    
+
     The field 'markers' contains a Markers that can be used for illustrative
     purposes.
     """
