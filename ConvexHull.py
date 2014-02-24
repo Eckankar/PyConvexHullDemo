@@ -70,6 +70,7 @@ def main():
         'jarvismarch': JarvisMarch(),
         'grahamscan': GrahamScan(),
         'marriagebq': MarriageBeforeConquest(),
+        'pointpruning': PointPruning(),
         'chan': ChansAlgorithm(),
     }
     parser = OptionParser()
