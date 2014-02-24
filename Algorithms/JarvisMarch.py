@@ -13,7 +13,7 @@ class JarvisMarch(HullAlgorithm):
             return a*d - b*c + b*e - d*e + c*f - a*f < 0
 
         # Step 1: Find the initial point for the hull
-        activeMarker = self.markers.addPointMarker(0, (100, 100, 255))
+        activeMarker = self.markers.addPointMarker(0, (255, 0, 0))
         minMarker = self.markers.addPointMarker(0, (0, 255, 0))
         minimum = 0
         yield
@@ -32,7 +32,7 @@ class JarvisMarch(HullAlgorithm):
         first = True
         while first or currentPoint != minimum:
             first = False
-            activeMarker = self.markers.addPointMarker(currentPoint, (100, 100, 255))
+            activeMarker = self.markers.addPointMarker(currentPoint, (255, 0, 0))
             currentMarker = self.markers.addPointMarker(currentPoint, (0, 0, 255))
             yield
             nextPoint = None
