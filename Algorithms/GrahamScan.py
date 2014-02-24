@@ -72,3 +72,5 @@ class GrahamScan(HullAlgorithm):
             yield
 
         self.markers.addLineMarker(stack[-1], p0, (100, 100, 255))
+
+        self.hull = stack

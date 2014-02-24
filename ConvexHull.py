@@ -70,6 +70,7 @@ def main():
         'jarvismarch': JarvisMarch(),
         'grahamscan': GrahamScan(),
         'marriagebq': MarriageBeforeConquest(),
+        'chan': ChansAlgorithm(),
     }
     parser = OptionParser()
     parser.add_option('-a', '--algorithm', type='choice',
